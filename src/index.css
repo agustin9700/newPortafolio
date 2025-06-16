@@ -1,0 +1,61 @@
+@import "./styles/navBar.css";
+@import "./styles/ccsHero.css";
+@import "./styles/about.css";
+@import "tailwindcss";
+
+
+
+:root {
+  --primary-color-dark: #2937aa;         /* Azul profundo, mantiene identidad */
+  --primary-color-boton: #00f0ff;        /* Cian vibrante, destaca en llamadas a la acción */
+  --bg-color: #0F0F1A;                   /* Fondo oscuro */
+  
+  --texto-principal: #DDE3FF;            /* Blanco ligeramente azulado, más suave y legible */
+  --texto-secundario: #8FB3FF;           /* Azul claro con mejor visibilidad */
+  --texto-terciario: #6A7AAE;            /* Azul-gris medio para menor jerarquía */
+
+  --borde-cyan: #00f0ff;                 /* Coincide con botón y nombre para cohesión */
+}
+
+
+*{
+      
+    font-family: "Space Mono", monospace;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.btn-primary {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--borde-cyan);
+  border-radius: 9999px; /* pill shape */
+  color: var(--borde-cyan);
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+.btn-primary:hover {
+  background-color: var(--borde-cyan);
+  color: #0f0f1a;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.boton-cv-navbar {
+  background-color: var(--primary-color-boton);
+  color: var(--bg-color);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.boton-cv-navbar:hover {
+  background-color: transparent;
+  color: var(--primary-color-boton);
+  border-color: var(--primary-color-boton);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
+}

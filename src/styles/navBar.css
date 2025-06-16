@@ -1,0 +1,46 @@
+
+
+.navbarPf {
+  background-color: var(--bg-color);
+  color: white;
+  position: fixed;
+
+ 
+  z-index: 3;
+}
+
+.logo-color {
+  color: var(--primary-color-boton);
+}
+
+
+
+
+
+
+.li-navbar {
+  position: relative;
+  transition: color 0.3s ease;
+  
+}
+
+.li-navbar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-color-boton);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.li-navbar:hover::before {
+  transform: scaleX(1);
+}
+
+.li-navbar:hover {
+  color: var(--primary-color-boton);
+}

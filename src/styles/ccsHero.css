@@ -1,0 +1,94 @@
+.hero {
+  background-color: var(--bg-color);
+}
+
+.bg-hero {
+    
+  color: white;
+  width: 1025px;
+  height: 764px;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+  background-image: url("../assets/rectangulo.png" ) ;
+  background-size: 3rem;
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden;
+
+position: relative; 
+
+
+
+ 
+  
+  
+}
+
+.bg-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, #0f0f1a 80%);
+  z-index: 1;
+}
+
+.nombre-dev {
+  background: linear-gradient(90deg, var(--texto-principal), var(--primary-color-boton));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: var(--texto-secundario); /* azul claro suave */
+  letter-spacing: 2px;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  color: var(--texto-principal); /* blanco azulado suave */
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+
+.container-card {
+  background-color: #0f0f1a;
+  border: 3px solid var(--borde-cyan);
+  border-radius: 1.25rem; 
+  width: 220px;
+  height: 220px;
+  padding: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+}
+
+.figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
