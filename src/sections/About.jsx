@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section className="about flex justify-center items-start min-h-screen">
+    <section
+      id="about"
+      className="about flex justify-center items-center px-2 py-20  scroll-mt-24"
+    >
       <div className="text-center max-w-3xl space-y-6">
         <h2 className="nombre-dev text-3xl sm:text-4xl font-bold m-0">
           Sobre mí
