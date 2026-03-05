@@ -1,8 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -16,7 +25,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="navbarPf flex justify-between items-center py-6 px-4 md:px-16 w-full shadow-md">
+    <nav className={`navbarPf flex justify-between items-center py-4 md:py-6 px-4 md:px-16 w-full shadow-md transition-all duration-300 ${scrolled ? 'scrolled' : ''}`}>
       <a href="/" className="flex items-center text-3xl">
         <h2 className="m-0">
           <span className="text-white">&lt;</span>

@@ -5,22 +5,20 @@ import Footer from "./sections/Footer"
 import Hero from "./sections/Hero"
 import Projects from "./sections/Projects"
 import Skills from "./sections/Skills"
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
- 
-
   return (
     <>
       <Navbar />
-       <main>
+      <ScrollToTop />
+        <main >
         <Hero />
         <About />
          <Skills />
-        {/* 
-       
         <Projects />
         <Contact />
-        <Footer /> */}
+        <Footer />
        
       </main> 
     </>
